@@ -4,44 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Generator</title>
-    <style>
-        .meme-generator {
-            margin: 20px auto;
-            width: 400px;
-            font-family: sans-serif;
-        }
-
-        .meme-generator label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 10px;
-        
-        }
-        .meme-generator input {
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-        }
-
-        #meme {
-            width: 100%;
-        }
-
-    </style>
+    <link rel="stylesheet" href="Meme.css"></link>
 </head>
 <body>
-    <div class='meme-generator'></div>
-    <label> Select an Image </label>
-    <input type='file' id='imageFileInput'>
-    <label> Top Text </label>
-    <input type='text' id='topTextInput'>
-    <label> Bottom Text </label>
-    <input type='text' id='bottomTextInput'>
+    <div class='meme-generator'>
+        <label>Select an Image</label>
+        <input type='text' id='imageUrl'>
+        <label>Top Text</label>
+        <input type='text' id='topTextInput'>
+        <label>Bottom Text</label>
+        <input type='text' id='bottomTextInput'>
+        <button id="button" class="button" type="submit" onclick="generateMeme()">Generate!</button>
+    </div>
 
-    <canvas id='meme'></canvas>
-</div>
+    <div id="divArea" class="divArea"></div>
+
     <script src='Meme.js'></script>
-
-    
 </body>
 </html>
